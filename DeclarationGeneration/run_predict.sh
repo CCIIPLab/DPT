@@ -1,0 +1,19 @@
+python ./finetuning_T5.py \
+    --model_name_or_path "[ROOT_DATA_DIR]/model/declaration/checkpoint-480000" \
+    --do_predict \
+    --source_lang en_q \
+    --target_lang en_a \
+    --source_prefix "translate question to declarative sentence: " \
+    --dataset_config_name en-en \
+    --train_file "[ROOT_DATA_DIR]/declaration/question_to_declarative_train.json" \
+    --validation_file "[ROOT_DATA_DIR]/declaration/question_to_declarative_val.json" \
+    --test_file "[SOURCE_FILE_DIR]/source_file.txt" \
+    --output_dir "./output" \
+    --per_device_train_batch_size=4 \
+    --per_device_eval_batch_size=64 \
+    --overwrite_output_dir \
+    --predict_with_generate \
+    --max_source_length 50 \
+    --max_target_length 50 \
+    --generation_max_length 50 \
+    --eval_accumulation_steps 80000
