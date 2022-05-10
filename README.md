@@ -21,6 +21,8 @@ answering.
 
 ## Citation
 
+**Please kindly cite our paper if this paper and the code are helpful.**
+
 ```
 @inproceedings{liu2022dpt,
     author={Liu, Yuhang and Wei, Wei and Peng, Daowan and Zhu, Feida},
